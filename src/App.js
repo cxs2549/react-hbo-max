@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router";
-import Navbar from "./components/layout/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 
 const routes = [{ path: "/", element: <Home /> }];
