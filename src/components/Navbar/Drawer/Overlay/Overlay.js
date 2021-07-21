@@ -10,7 +10,10 @@ const StyledOverlay = styled.div`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   opacity: ${({ open }) => (open ? "1" : "0")};
   transition: 1s all;
-  z-index: 1;
+  z-index: 11;
+  @media (min-width: 768px) {
+      left: 56px;
+    }
 `
 
 const Overlay = ({open, clicked}) => {

@@ -1,46 +1,64 @@
 import { NavLink } from "react-router-dom";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledDrawer = styled.div`
   position: fixed;
   left: ${({ open }) => (open ? "0" : "-100%")};
   top: 10;
   width: 75%;
+  max-width: 400px;
   height: 95%;
   background-color: black;
-  transition: left .5s ease-in;
+  transition: left 0.35s ease-in;
+  transition-delay: .2s;
   z-index: 9;
   min-height: 0 !important; /* added */
   overflow-y: auto;
   scrollbar-width: none;
   padding: 0;
+  z-index: 12;
+  @media (min-width: 768px) {
+    left: ${({ open }) => (open ? "56px" : "-100%")};
+  }
   nav {
     height: min-content;
-
+    color: white;
     width: 100%;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     padding: 0 !important;
+    .active {
+      opacity: .95;
+      color: black;
+      background-color: white;
+    }
     a {
-      padding: 1rem;
+      padding: 12px 1rem;
       font-size: 1.25rem;
+      font-weight: 300;
       width: 100%;
       text-transform: capitalize;
+      transition: all 150ms;
+      transition-delay: 100ms;
+      opacity: .8;
+     
       &:hover {
         background-color: white;
         color: black;
+        opacity: .9;
       }
       &:is(:nth-child(7), :nth-child(25)) {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #353549;
+      }
+      @media (min-width: 768px) {
+        font-size: 1.7rem;
       }
     }
-    
   }
-  
-`
+`;
 
-const Drawer = ({open}) => {
+const Drawer = ({ open, clicked }) => {
   const links1 = [
     { name: "series", to: "/series" },
     { name: "movies", to: "/movies" },
@@ -73,24 +91,18 @@ const Drawer = ({open}) => {
   return (
     <StyledDrawer open={open}>
       <nav>
-        
-          {links1.map((link) => (
-            <NavLink to={link.to}>
-              {link.name}
-            </NavLink>
-
-          ))}
-          {links2.map((link, i) => (
-            <NavLink key={i} to="/">
-              {link}
-            </NavLink>
-
-          ))}
-          <NavLink to="/">Audio Description</NavLink>
-       
+        {links1.map((link) => (
+          <NavLink to={link.to} activeClassName="active" onClick={clicked}>{link.name}</NavLink>
+        ))}
+        {links2.map((link, i) => (
+          <NavLink key={i} to={`genre-${i}`} activeClassName="active" onClick={clicked}>
+            {link}
+          </NavLink>
+        ))}
+        <NavLink to="/audio-description" activeClassName="active" onClick={clicked}>Audio Description</NavLink>
       </nav>
     </StyledDrawer>
-  )
-}
+  );
+};
 
-export default Drawer
+export default Drawer;
