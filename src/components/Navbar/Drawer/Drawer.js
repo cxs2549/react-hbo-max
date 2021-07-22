@@ -7,7 +7,7 @@ const StyledDrawer = styled.div`
   top: 10;
   width: 75%;
   max-width: 400px;
-  height: 95%;
+  height: 94%;
   background-color: black;
   transition: left 0.35s ease-in;
   transition-delay: .2s;
@@ -16,7 +16,7 @@ const StyledDrawer = styled.div`
   overflow-y: auto;
   scrollbar-width: none;
   padding: 0;
-  z-index: 12;
+  z-index: 20;
   @media (min-width: 768px) {
     left: ${({ open }) => (open ? "56px" : "-100%")};
   }

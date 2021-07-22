@@ -12,9 +12,10 @@ const StyledSidebar = styled.div`
     background-color: black;
     border-right: 1px solid #353549;
     height: 100vh;
-    z-index: 13;
+    z-index: 22;
   }
   nav {
+    padding-top: 2px;
     color: white;
     flex-flow: column;
     display: flex;
@@ -23,7 +24,7 @@ const StyledSidebar = styled.div`
     svg {
       max-width: 24px;
       padding: 0;
-      min-height: 64.8px;
+      min-height: 64px;
       transition: all 250ms;
       transition-delay: 120ms;
     }

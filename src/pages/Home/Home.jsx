@@ -1,10 +1,16 @@
+import styled from 'styled-components'
 import Hero from "./Hero/Hero"
+
+const StyledHome = styled.div`
+    position: relative;
+    z-index: -1;
+`
 
 const Home = () => {
     return (
-        <div className="h-screen bg-blue-200">
+        <StyledHome className="h-screen">
             <Hero />
-        </div>
+        </StyledHome>
     )
 }
 
