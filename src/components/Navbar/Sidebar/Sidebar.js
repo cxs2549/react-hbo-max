@@ -30,7 +30,7 @@ const StyledSidebar = styled.div`
   }
 `;
 
-const Sidebar = ({ open, clicked }) => {
+const Sidebar = ({ open, clicked, close }) => {
   return (
     <StyledSidebar>
       <nav>
@@ -68,7 +68,7 @@ const Sidebar = ({ open, clicked }) => {
             </svg>
             )}
           </div>
-          <NavLink to="/" end activeClassName="text-brand-pink">
+          <NavLink to="/" end activeClassName="text-brand-pink" onClick={close}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -86,7 +86,7 @@ const Sidebar = ({ open, clicked }) => {
           </NavLink>
         </div>
         <div className="flex flex-col">
-          <NavLink to="/search" activeClassName="text-brand-pink">
+          <NavLink to="/search" activeClassName="text-brand-pink" onClick={close}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -102,7 +102,7 @@ const Sidebar = ({ open, clicked }) => {
             />
           </svg>
           </NavLink>
-          <NavLink to="/account" activeClassName="text-brand-pink">
+          <NavLink to="/account" activeClassName="text-brand-pink" onClick={close}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

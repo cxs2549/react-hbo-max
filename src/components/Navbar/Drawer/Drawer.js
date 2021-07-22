@@ -92,7 +92,7 @@ const Drawer = ({ open, clicked }) => {
     <StyledDrawer open={open}>
       <nav>
         {links1.map((link) => (
-          <NavLink to={link.to} activeClassName="active" onClick={clicked}>{link.name}</NavLink>
+          <NavLink to={link.to} end activeClassName="active" onClick={clicked}>{link.name}</NavLink>
         ))}
         {links2.map((link, i) => (
           <NavLink key={i} to={`genre-${i}`} activeClassName="active" onClick={clicked}>

@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 
 const routes = [{ path: "/", element: <Home /> }];
 
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div>{element}</div>
+      <main>{element}</main>
     </>
   );
 };

@@ -3,21 +3,34 @@
 @tailwind utilities;
 
 :root {
-    --brand-pink: #FF00E4;
+  --brand-pink: #ff00e4;
 }
 
-html, body {
-    scrollbar-width: none;
-  }
+html,
+body {
+  scrollbar-width: none;
+}
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: 56px;
+  position: relative;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-left: 56px;
+  }
 }
 
 .modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
-

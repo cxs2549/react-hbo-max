@@ -1,16 +1,7 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import {
-  MenuAlt1Icon,
-  XIcon,
-  HomeIcon,
-  SearchIcon,
-  UserIcon,
-} from "@heroicons/react/outline";
 import Overlay from "./Drawer/Overlay/Overlay";
 import Drawer from "./Drawer/Drawer";
-import logo from "../../assets/logo.png";
 import Sidebar from "./Sidebar/Sidebar";
 import Navigation from "./Navigation/Navigation";
 
@@ -27,7 +18,7 @@ const Navbar = () => {
   return (
     <StyledHeader>
       <Navigation open={isOpen} clicked={() => setIsOpen(!isOpen)} close={() => setIsOpen(false)} />
-      <Sidebar open={isOpen} clicked={() => setIsOpen(!isOpen)} />
+      <Sidebar open={isOpen} clicked={() => setIsOpen(!isOpen)} close={() => setIsOpen(false)} />
       <Overlay open={isOpen} clicked={() => setIsOpen(!isOpen)} />
       <Drawer open={isOpen} clicked={() => setIsOpen(!isOpen)} />
     </StyledHeader>
