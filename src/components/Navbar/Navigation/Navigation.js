@@ -26,7 +26,7 @@ const StyledNavigation = styled.nav`
 	}
 `
 
-const Navigation = ({ open, clicked, close }) => {
+const Navigation = ({ open, clicked }) => {
 	return (
 		<StyledNavigation>
 			<div className="space-x-5 flex md:hidden">
@@ -71,7 +71,7 @@ const Navigation = ({ open, clicked, close }) => {
 
 			<div className="fixed h-14 bg-black bottom-0 left-0 w-full md:hidden">
 				<div className="space-x-24 flex md:hidden items-center justify-center h-full">
-					<NavLink to="/" end activeClassName="text-brand-pink" onClick={close}>
+					<NavLink to="/" end activeClassName="text-brand-pink" onClick={clicked}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6"
@@ -87,7 +87,7 @@ const Navigation = ({ open, clicked, close }) => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/search" activeClassName="text-brand-pink" onClick={close}>
+					<NavLink to="/search" activeClassName="text-brand-pink" onClick={clicked}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6"
@@ -103,7 +103,7 @@ const Navigation = ({ open, clicked, close }) => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/account" activeClassName="text-brand-pink" onClick={close}>
+					<NavLink to="/account" activeClassName="text-brand-pink" onClick={clicked}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6"

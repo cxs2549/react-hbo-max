@@ -15,7 +15,6 @@ const StyledSidebar = styled.div`
     z-index: 22;
   }
   nav {
-    padding-top: 2px;
     color: white;
     flex-flow: column;
     display: flex;
@@ -24,9 +23,10 @@ const StyledSidebar = styled.div`
     svg {
       max-width: 24px;
       padding: 0;
-      min-height: 64px;
+      min-height: 63.5px;
       transition: all 250ms;
       transition-delay: 120ms;
+      margin-top: .25px;
     }
   }
 `;

@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+#root {
+  z-index: -3;
+  position: relative;
+}
   body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,7 +23,7 @@ body {
 main {
   /* margin-top: 56px; */
   position: relative;
-  z-index: 0;
+  z-index: -2;
 }
 
 @media (min-width: 768px) {

@@ -5,24 +5,24 @@ const StyledHero = styled.div`
   overflow: hidden;
   position: relative;
   margin-top: 56px;
-  #hero {
-    background-image: url(${hero});
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 30vh;
-    @media (min-width: 768px) {
-      height: 45vh;
-    }
-    @media (min-width: 1024px) {
-      height: 55vh;
-    }
-    @media (min-width: 1280px) {
-      height: 84vh;
-    }
-    transition: height 0.7s;
-  }
+	#hero {
+		background-image: url(${hero});
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 30vh;
+		@media (min-width: 768px) {
+			height: 55vh;
+		}
+		@media (min-width: 1024px) {
+			height: 45vh;
+		}
+		@media (min-width: 1280px) {
+			height: 65vh;
+		}
+		transition: height .7s;
+	}
   img {
     max-height: 100%;
     min-width: 100%;
@@ -49,8 +49,9 @@ const StyledHero = styled.div`
       height: 100px;
     }
     @media (min-width: 1280px) {
-      height: 0;
+      height: 60px;
     }
+		
 
     h1 {
       font-size: 1.45rem;
@@ -61,11 +62,16 @@ const StyledHero = styled.div`
       @media (min-width: 768px) {
         font-size: 1.5rem;
       }
-      @media (min-width: 1280px) {
-        font-size: 300%;
-        line-height: 1;
-        padding-bottom: 0.5rem;
+      @media (min-width: 1024px) {
+        font-size: 2.2rem;
       }
+			@media (min-width: 1280px) {
+				font-size: 300%;
+				line-height: 1;
+				padding-bottom: .5rem;
+        text-shadow: 1px 1px 1px #6d2b63;
+
+			}
     }
 
     h2 {
@@ -78,7 +84,7 @@ const StyledHero = styled.div`
       }
       @media (min-width: 1024px) {
         text-shadow: 1px 1px 1px #6d2b63;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
     }
     p {
@@ -128,7 +134,7 @@ opacity: .96;
     @media (min-width: 1024px) {
       /* bottom: 4%; */
       left: 2rem;
-      bottom: 1.5rem;
+			bottom: 2rem;
     }
   }
 `;
@@ -152,7 +158,7 @@ const Hero = () => {
             In theaters and on HBO Max. Streaming <br /> through Aug 15.
           </p>
           <div className="text-sm flex space-x-4 mt-6">
-            <button className="border-2 border-gray-100 rounded-full uppercase font-semibold flex items-center space-x-1">
+            <button className="border-2  rounded-full uppercase font-semibold flex items-center space-x-1">
               <div className="text-brand-bright-pink">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
