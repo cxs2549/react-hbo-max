@@ -5,24 +5,24 @@ const StyledHero = styled.div`
   overflow: hidden;
   position: relative;
   margin-top: 56px;
-	#hero {
-		background-image: url(${hero});
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 30vh;
-		@media (min-width: 768px) {
-			height: 45vh;
-		}
-		@media (min-width: 1024px) {
-			height: 55vh;
-		}
-		@media (min-width: 1280px) {
-			height: 84vh;
-		}
-		transition: height .7s;
-	}
+  #hero {
+    background-image: url(${hero});
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vh;
+    @media (min-width: 768px) {
+      height: 45vh;
+    }
+    @media (min-width: 1024px) {
+      height: 55vh;
+    }
+    @media (min-width: 1280px) {
+      height: 84vh;
+    }
+    transition: height 0.7s;
+  }
   img {
     max-height: 100%;
     min-width: 100%;
@@ -48,12 +48,12 @@ const StyledHero = styled.div`
     @media (min-width: 1024px) {
       height: 100px;
     }
-		@media (min-width: 1280px) {
-			height: 0;
-		}
+    @media (min-width: 1280px) {
+      height: 0;
+    }
 
     h1 {
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       font-weight: 700;
       text-transform: uppercase;
       line-height: 1.1;
@@ -61,11 +61,11 @@ const StyledHero = styled.div`
       @media (min-width: 768px) {
         font-size: 1.5rem;
       }
-			@media (min-width: 1280px) {
-				font-size: 300%;
-				line-height: 1;
-				padding-bottom: .5rem;
-			}
+      @media (min-width: 1280px) {
+        font-size: 300%;
+        line-height: 1;
+        padding-bottom: 0.5rem;
+      }
     }
 
     h2 {
@@ -80,10 +80,9 @@ const StyledHero = styled.div`
         text-shadow: 1px 1px 1px #6d2b63;
         font-size: 1.25rem;
       }
-		
     }
     p {
-      font-size: 0.85rem;
+      font-size: 0.83rem;
       line-height: 1.25;
       opacity: 0.9;
       padding-top: 4px;
@@ -112,6 +111,13 @@ const StyledHero = styled.div`
       &:first-child {
         position: relative;
         z-index: 500;
+       
+      }
+      &:last-child {
+        background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #FF00E4 74%);
+opacity: .96;
+
       }
     }
   }
@@ -122,7 +128,7 @@ const StyledHero = styled.div`
     @media (min-width: 1024px) {
       /* bottom: 4%; */
       left: 2rem;
-			bottom: 1.5rem;
+      bottom: 1.5rem;
     }
   }
 `;
@@ -132,7 +138,7 @@ const Hero = () => {
     <StyledHero>
       <div id="imageContainer" className="relative">
         {/* <img src={hero} alt="" className="md:order-2" /> */}
-				<div id="hero"></div>
+        <div id="hero"></div>
         <div id="overlay"></div>
       </div>
 
@@ -163,7 +169,7 @@ const Hero = () => {
               </div>
               <h4>watch</h4>
             </button>
-            <button className="rounded-full uppercase font-semibold inline bg-brand-bright-pink bg-opacity-80 bg-brand-pink">
+            <button className="rounded-full uppercase font-semibold inline">
               more info
             </button>
           </div>

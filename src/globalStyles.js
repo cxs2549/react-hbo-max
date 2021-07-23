@@ -18,8 +18,8 @@ body {
 
 main {
   /* margin-top: 56px; */
-  /* position: relative;
-  z-index: 0; */
+  position: relative;
+  z-index: 0;
 }
 
 @media (min-width: 768px) {

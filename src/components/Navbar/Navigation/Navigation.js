@@ -22,7 +22,7 @@ const StyledNavigation = styled.nav`
 		filter: brightness(0) invert(1);
 		left: 50%;
 		transform: translateX(-50%);
-		max-width: 130px;
+		max-width: 120px;
 	}
 `
 
