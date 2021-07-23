@@ -1,4 +1,5 @@
 import { useRoutes } from "react-router";
+import GlobalStyle from "./globalStyles";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 
@@ -9,6 +10,7 @@ const App = () => {
 
   return (
     <>
+      <GlobalStyle />
       <Navbar />
       <main>{element}</main>
     </>

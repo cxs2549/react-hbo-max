@@ -17,6 +17,7 @@ const StyledDrawer = styled.div`
   scrollbar-width: none;
   padding: 0;
   z-index: 20;
+  padding-bottom: 5rem;
   @media (min-width: 768px) {
     left: ${({ open }) => (open ? "56px" : "-100%")};
   }
