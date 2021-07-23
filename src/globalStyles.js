@@ -36,6 +36,22 @@ main {
   overflow: hidden;
 }
 
+h3 {
+		font-size: 115%;
+		font-weight: 600;
+		text-transform: capitalize;
+		padding: 0 1rem;
+		padding-bottom: .35rem;
+		@media (min-width: 768px) {
+			padding: 0 2rem;
+			padding-bottom: .45rem;
+			font-size: 120%;
+		}
+		@media (min-width: 1024px) {
+			font-size: 138%;
+		}
+	}
+
 `;
 
 export default GlobalStyle;

@@ -19,7 +19,8 @@ const StyledHero = styled.div`
 			height: 45vh;
 		}
 		@media (min-width: 1280px) {
-			height: 65vh;
+			height: 70vh;
+      background-position: top;
 		}
 		transition: height .7s;
 	}
@@ -60,7 +61,7 @@ const StyledHero = styled.div`
       line-height: 1.1;
       padding-bottom: 0.25rem;
       @media (min-width: 768px) {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
       @media (min-width: 1024px) {
         font-size: 2.2rem;
@@ -131,10 +132,14 @@ opacity: .96;
     position: absolute;
     bottom: 1.25rem;
     height: max-content;
+    transition: bottom 250ms;
     @media (min-width: 1024px) {
       /* bottom: 4%; */
       left: 2rem;
 			bottom: 2rem;
+    }
+    @media (min-width: 1280px) {
+      bottom: 4rem;
     }
   }
 `;
@@ -162,7 +167,7 @@ const Hero = () => {
               <div className="text-brand-bright-pink">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-brand-pink"
+                  className="h-6 w-6 text-brand-pink"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >

@@ -6,7 +6,7 @@ const StyledList = styled.div`
 	color: white;
 	display: grid;
 	gap: 1.25rem;
-	margin-bottom: 56px;
+	padding-bottom: 1rem;
 	
 	
 `

@@ -24,9 +24,18 @@ const Navbar = () => {
 		}
 	}
 
+	const handleClose = () => {
+		setIsOpen(false)
+		if (!isOpen) {
+			document.body.classList.add('modal-open')
+		} else {
+			document.body.classList.remove('modal-open')
+		}
+	}
+
 	return (
 		<StyledHeader>
-			<Navigation open={isOpen} clicked={handleClick} close={() => setIsOpen(false)} />
+			<Navigation open={isOpen} clicked={handleClick} close={handleClose} />
 			<Sidebar open={isOpen} clicked={handleClick} close={() => setIsOpen(false)} />
 			<Overlay open={isOpen} clicked={handleClick} />
 			<Drawer open={isOpen} clicked={handleClick} />
