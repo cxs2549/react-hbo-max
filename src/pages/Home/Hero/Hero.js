@@ -13,13 +13,13 @@ const StyledHero = styled.div`
 		width: 100%;
 		height: 30vh;
 		@media (min-width: 768px) {
-			height: 45vh;
-		}
-		@media (min-width: 1024px) {
 			height: 55vh;
 		}
+		@media (min-width: 1024px) {
+			height: 45vh;
+		}
 		@media (min-width: 1280px) {
-			height: 84vh;
+			height: 65vh;
 		}
 		transition: height .7s;
 	}
@@ -48,9 +48,10 @@ const StyledHero = styled.div`
     @media (min-width: 1024px) {
       height: 100px;
     }
-		@media (min-width: 1280px) {
-			height: 0;
-		}
+    @media (min-width: 1280px) {
+      height: 60px;
+    }
+		
 
     h1 {
       font-size: 1.35rem;
@@ -61,10 +62,15 @@ const StyledHero = styled.div`
       @media (min-width: 768px) {
         font-size: 1.5rem;
       }
+      @media (min-width: 1024px) {
+        font-size: 2.2rem;
+      }
 			@media (min-width: 1280px) {
 				font-size: 300%;
 				line-height: 1;
 				padding-bottom: .5rem;
+        text-shadow: 1px 1px 1px #6d2b63;
+
 			}
     }
 
@@ -78,7 +84,7 @@ const StyledHero = styled.div`
       }
       @media (min-width: 1024px) {
         text-shadow: 1px 1px 1px #6d2b63;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
 		
     }
@@ -109,10 +115,7 @@ const StyledHero = styled.div`
       @media (min-width: 768px) {
         font-size: 0.9rem;
       }
-      &:first-child {
-        position: relative;
-        z-index: 500;
-      }
+     
     }
   }
   #text {
@@ -122,7 +125,7 @@ const StyledHero = styled.div`
     @media (min-width: 1024px) {
       /* bottom: 4%; */
       left: 2rem;
-			bottom: 1.5rem;
+			bottom: 2rem;
     }
   }
 `;
@@ -146,7 +149,7 @@ const Hero = () => {
             In theaters and on HBO Max. Streaming <br /> through Aug 15.
           </p>
           <div className="text-sm flex space-x-4 mt-6">
-            <button className="border-2 border-gray-100 rounded-full uppercase font-semibold flex items-center space-x-1">
+            <button className="border-2  rounded-full uppercase font-semibold flex items-center space-x-1">
               <div className="text-brand-bright-pink">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

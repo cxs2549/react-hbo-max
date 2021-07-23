@@ -10,7 +10,7 @@ const StyledDrawer = styled.div`
   height: 94%;
   background-color: black;
   transition: left 0.35s ease-in;
-  transition-delay: .2s;
+  transition-delay: 200ms;
   z-index: 9;
   min-height: 0 !important; /* added */
   overflow-y: auto;
