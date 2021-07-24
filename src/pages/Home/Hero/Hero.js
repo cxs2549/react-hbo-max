@@ -5,25 +5,25 @@ const StyledHero = styled.div`
   overflow: hidden;
   position: relative;
   margin-top: 56px;
-	#hero {
-		background-image: url(${hero});
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 30vh;
-		@media (min-width: 768px) {
-			height: 55vh;
-		}
-		@media (min-width: 1024px) {
-			height: 45vh;
-		}
-		@media (min-width: 1280px) {
-			height: 70vh;
+  #hero {
+    background-image: url(${hero});
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vh;
+    @media (min-width: 768px) {
+      height: 55vh;
+    }
+    @media (min-width: 1024px) {
+      height: 45vh;
       background-position: top;
-		}
-		transition: height .7s;
-	}
+    }
+    @media (min-width: 1280px) {
+      height: 70vh;
+    }
+    transition: height 0.7s;
+  }
   img {
     max-height: 100%;
     min-width: 100%;
@@ -36,7 +36,7 @@ const StyledHero = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 50%;
+    height: 60%;
     background-image: linear-gradient(to top, #171e54, transparent);
   }
   #info {
@@ -52,7 +52,6 @@ const StyledHero = styled.div`
     @media (min-width: 1280px) {
       height: 60px;
     }
-		
 
     h1 {
       font-size: 1.45rem;
@@ -66,13 +65,12 @@ const StyledHero = styled.div`
       @media (min-width: 1024px) {
         font-size: 2.2rem;
       }
-			@media (min-width: 1280px) {
-				font-size: 300%;
-				line-height: 1;
-				padding-bottom: .5rem;
+      @media (min-width: 1280px) {
+        font-size: 300%;
+        line-height: 1;
+        padding-bottom: 0.5rem;
         text-shadow: 1px 1px 1px #6d2b63;
-
-			}
+      }
     }
 
     h2 {
@@ -118,13 +116,17 @@ const StyledHero = styled.div`
       &:first-child {
         position: relative;
         z-index: 500;
-       
+        transition: all 400ms;
+        &:hover {
+          border-color: #FF00E3;
+        }
       }
       &:last-child {
-        background-color: #1fd1f9;
-background-image: linear-gradient(315deg, #1fd1f9 0%, #FF00E4 74%);
-opacity: .96;
-
+        background-color: #8E109E;
+        transition: opacity 400ms;
+        &:hover {
+          opacity: .8;
+        }
       }
     }
   }
@@ -136,7 +138,7 @@ opacity: .96;
     @media (min-width: 1024px) {
       /* bottom: 4%; */
       left: 2rem;
-			bottom: 2rem;
+      bottom: 2rem;
     }
     @media (min-width: 1280px) {
       bottom: 4rem;

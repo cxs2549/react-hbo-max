@@ -1,5 +1,17 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import {
+  hub1,
+  hub2,
+  hub3,
+  hub4,
+  hub5,
+  hub6,
+  hub7,
+  hub8,
+  hub9,
+  hub10,
+} from "../../../assets/hubs";
 
 const StyledDrawer = styled.div`
   position: fixed;
@@ -17,7 +29,7 @@ const StyledDrawer = styled.div`
   scrollbar-width: none;
   padding: 0;
   z-index: 20;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
   @media (min-width: 768px) {
     left: ${({ open }) => (open ? "56px" : "-100%")};
   }
@@ -30,7 +42,7 @@ const StyledDrawer = styled.div`
     align-items: flex-start;
     padding: 0 !important;
     .active {
-      opacity: .95;
+      opacity: 0.95;
       color: black;
       background-color: white;
     }
@@ -42,19 +54,62 @@ const StyledDrawer = styled.div`
       text-transform: capitalize;
       transition: all 150ms;
       transition-delay: 100ms;
-      opacity: .8;
-     
+      opacity: 0.8;
+
       &:hover {
         background-color: white;
         color: black;
-        opacity: .9;
+        opacity: 0.9;
       }
-      &:is(:nth-child(7), :nth-child(25)) {
+      &:is(:nth-child(7), :nth-child(25), :nth-child(26)) {
         border-bottom: 1px solid #353549;
       }
       @media (min-width: 768px) {
         font-size: 1.7rem;
       }
+    }
+  }
+`;
+const StyledHubs = styled.div`
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-bottom: 4rem;
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  #imageWrapper {
+    cursor: pointer;
+    min-width: 48%;
+    height: 76px;
+    padding: 4px 32px;
+    border-radius: 99999px;
+    margin-bottom: 1rem;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    position: relative;
+    img {
+      height: 90%;
+      width: 90%;
+      object-fit: contain;
+      padding:  0;
+    }
+    #imageBG {
+      position: absolute;
+      left: 50%;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 92%;
+      width: 97%;
+      background-color: black;
+      display: grid;
+      place-items: center;
     }
   }
 `;
@@ -89,18 +144,41 @@ const Drawer = ({ open, clicked }) => {
     "sports",
     "suspense",
   ];
+  const hubs = [hub1, hub2, hub3, hub4, hub5, hub6, hub7, hub8, hub9, hub10];
   return (
     <StyledDrawer open={open}>
       <nav>
         {links1.map((link) => (
-          <NavLink to={link.to} end activeClassName="active" onClick={clicked}>{link.name}</NavLink>
+          <NavLink to={link.to} end activeClassName="active" onClick={clicked}>
+            {link.name}
+          </NavLink>
         ))}
         {links2.map((link, i) => (
-          <NavLink key={i} to={`genre-${i}`} activeClassName="active" onClick={clicked}>
+          <NavLink
+            key={i}
+            to={`genre-${i}`}
+            activeClassName="active"
+            onClick={clicked}
+          >
             {link}
           </NavLink>
         ))}
-        <NavLink to="/audio-description" activeClassName="active" onClick={clicked}>Audio Description</NavLink>
+        <NavLink
+          to="/audio-description"
+          activeClassName="active"
+          onClick={clicked}
+        >
+          Audio Description
+        </NavLink>
+        <StyledHubs>
+          {hubs.map((hub, i) => (
+            <div key={i} id="imageWrapper">
+              <div className=" rounded-full h-full" id="imageBG">
+                <img src={hub} alt="" />
+              </div>
+            </div>
+          ))}
+        </StyledHubs>
       </nav>
     </StyledDrawer>
   );

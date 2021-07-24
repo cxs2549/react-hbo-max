@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const StyledHubs = styled.div`
-  background-color: black;
+  background-color: transparent;
   width: 100%;
-  margin-bottom: 56px;
+  /* margin-bottom: 56px; */
   /* gap: .25rem; */
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,9 +14,12 @@ const StyledHubs = styled.div`
   @media (min-width: 768px) {
     padding: 1rem 2rem;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   #imageWrapper {
+    cursor: pointer;
+
     min-width: 49%;
     height: 76px;
     padding: 4px 32px;
