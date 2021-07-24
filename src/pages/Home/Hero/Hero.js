@@ -122,10 +122,11 @@ const StyledHero = styled.div`
         }
       }
       &:last-child {
-        background-color: #8E109E;
+        background-color: #c21bd8;
         transition: opacity 400ms;
         &:hover {
-          opacity: .8;
+          opacity: .9;
+         
         }
       }
     }

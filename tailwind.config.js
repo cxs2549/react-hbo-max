@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      outline: {
+        pink: "2px solid #FF00E4",
+      },
       colors: {
         "brand-pink": "#FF00E4",
       },

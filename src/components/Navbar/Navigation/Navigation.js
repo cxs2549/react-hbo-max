@@ -17,7 +17,7 @@ const StyledNavigation = styled.nav`
 	svg {
 		max-width: 24px;
 		transition: all 250ms;
-		transition-delay: 120ms;
+		transition-delay: 90ms;
 	}
 
 	#logo {
@@ -104,7 +104,7 @@ const Navigation = ({ open, clicked, close }) => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/account" activeClassName="text-brand-pink" onClick={close}>
+					<NavLink to="/account/my-list" activeClassName="text-brand-pink" onClick={close}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6"

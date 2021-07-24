@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+$HBOPink: #FF00E4;
 #root {
   z-index: -3;
   position: relative;
@@ -21,7 +22,7 @@ body {
 }
 
 main {
-  /* margin-top: 56px; */
+  margin-top: 56px;
   position: relative;
   z-index: -2;
 }

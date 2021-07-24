@@ -31,7 +31,7 @@ const StyledDrawer = styled.div`
 		align-items: flex-start;
 		padding: 0 !important;
 		.active {
-			opacity: .97;
+			opacity: .98;
 			color: black;
 			background-color: white;
 		}
@@ -43,12 +43,12 @@ const StyledDrawer = styled.div`
 			text-transform: capitalize;
 			transition: all 150ms;
 			transition-delay: 100ms;
-			opacity: 0.85;
+		
 
 			&:hover {
-				background-color: white;
+				background-color: #ffffffd7;
 				color: black;
-				opacity: 0.9;
+			
 			}
 			&:is(:nth-child(7), :nth-child(25), :nth-child(26)) {
 				border-bottom: 1px solid #353549;
@@ -80,7 +80,7 @@ const StyledHubs = styled.div`
 		border-radius: 99999px;
 		margin-bottom: 1rem;
 		background-color: #1fd1f9;
-		background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+		background-image: linear-gradient(315deg, #1fd1f9 0%, #B535F5 74%);
 		position: relative;
 		img {
 			height: 90%;
@@ -105,6 +105,7 @@ const StyledHubs = styled.div`
 
 const Drawer = ({ open, clicked }) => {
 	const links1 = [
+		{ name: 'home', to: '/' },
 		{ name: 'series', to: '/series' },
 		{ name: 'movies', to: '/movies' },
 		{ name: 'originals', to: '/originals' },
