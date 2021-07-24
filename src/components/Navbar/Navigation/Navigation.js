@@ -16,6 +16,8 @@ const StyledNavigation = styled.nav`
 	z-index: 100;
 	svg {
 		max-width: 24px;
+		transition: all 250ms;
+		transition-delay: 120ms;
 	}
 
 	#logo {
@@ -64,10 +66,9 @@ const Navigation = ({ open, clicked, close }) => {
 					)}
 				</div>
 			</div>
-			<NavLink id="logo" to="/" className="absolute">
+			<NavLink onClick={close} id="logo" to="/" className="absolute">
 				<img src={logo} alt="" />
 			</NavLink>
-			
 
 			<div className="fixed h-14 bg-black bottom-0 left-0 w-full md:hidden">
 				<div className="space-x-24 flex md:hidden items-center justify-center h-full">

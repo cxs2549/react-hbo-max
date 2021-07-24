@@ -26,11 +26,7 @@ const Navbar = () => {
 
 	const handleClose = () => {
 		setIsOpen(false)
-		if (!isOpen) {
-			document.body.classList.add('modal-open')
-		} else {
-			document.body.classList.remove('modal-open')
-		}
+		document.body.classList.remove('modal-open')
 	}
 
 	return (

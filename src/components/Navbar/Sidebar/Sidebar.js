@@ -23,7 +23,7 @@ const StyledSidebar = styled.div`
     svg {
       max-width: 24px;
       padding: 0;
-      min-height: 63.5px;
+      min-height: 64.8px;
       transition: all 250ms;
       transition-delay: 120ms;
       margin-top: .25px;
