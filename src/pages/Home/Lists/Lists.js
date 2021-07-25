@@ -7,6 +7,8 @@ const StyledList = styled.div`
 	display: grid;
 	gap: 1.25rem;
 	padding-bottom: 1rem;
+	max-width: 1320px;
+	margin: 0 auto;
 `
 
 const Lists = ({ children }) => {

@@ -22,6 +22,10 @@ const StyledDrawer = styled.div`
 		max-width: 400px;
 		left: ${({ open }) => (open ? '56px' : '-100%')};
 	}
+	@media (min-width: 1280px) {
+		left: ${({ open }) => (open ? '0' : '-100%')};
+		padding-left: 3.5rem;
+	}
 	nav {
 		height: min-content;
 		color: white;
@@ -30,6 +34,7 @@ const StyledDrawer = styled.div`
 		flex-flow: column;
 		align-items: flex-start;
 		padding: 0 !important;
+		
 		.active {
 			opacity: .98;
 			color: black;
@@ -50,7 +55,7 @@ const StyledDrawer = styled.div`
 				color: black;
 			
 			}
-			&:is(:nth-child(7), :nth-child(25), :nth-child(26)) {
+			&:is(:nth-child(7), :nth-child(26)) {
 				border-bottom: 1px solid #353549;
 			}
 			@media (min-width: 768px) {
@@ -61,6 +66,7 @@ const StyledDrawer = styled.div`
 `
 const StyledHubs = styled.div`
 	background-color: black;
+	border-top: 1px solid #353549;
 	width: 100%;
 	padding: 1rem;
 	display: flex;

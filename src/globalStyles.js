@@ -1,10 +1,11 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-$HBOPink: #FF00E4;
 #root {
   z-index: -3;
   position: relative;
+  background-color: #9921e8;
+	background-image: linear-gradient(to top, #1f1128 0%, black 74%);
 }
   body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -33,6 +34,12 @@ main {
   }
 }
 
+@media (min-width: 1280px) {
+  main {
+    margin-left: 0;
+  }
+}
+
 .modal-open {
   overflow: hidden;
 }
@@ -44,15 +51,20 @@ h3 {
 		padding: 0 1rem;
 		padding-bottom: .35rem;
 		@media (min-width: 768px) {
-			padding: 0 2rem;
+			padding: 0 1.25rem;
 			padding-bottom: .45rem;
 			font-size: 120%;
 		}
 		@media (min-width: 1024px) {
 			font-size: 138%;
 		}
+    @media (min-width: 1280px) {
+      padding: 0;
+      padding-bottom: .5rem;
+      font-size: 144%;
+    }
 	}
 
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

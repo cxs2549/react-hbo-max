@@ -1,22 +1,15 @@
-import { cover3, cover18, cover16 } from "../../../assets/art";
-import styled from "styled-components";
+import { cover3, cover18, cover16, cover7, cover13 } from "../../../assets/art";
 import Page from "../Page/Page";
 
-const StyledPage = styled.div`
-border: 1px solid white;
-  #wrapper {
-    grid-template-columns: 1.5fr 2fr;
-  }
-  #info {
-    font-size: 12px;
-  }
-`;
+
 
 const Continue = () => {
   const downloads = [
-    { image: cover3, title: "blackhat", original: false, duration: "25%" },
-    { image: cover18, title: "Warrior", original: true, duration: "15%" },
-    { image: cover16, title: "The Little Things", original: true, duration: "59%" },
+    { image: cover3, title: "blackhat", original: false, duration: "25%", year: 2015 },
+    { image: cover18, title: "Warrior", original: true, duration: "15%", year: 2019 },
+    { image: cover16, title: "The Little Things", original: true, duration: "59%", year: 2021 },
+    { image: cover7, title: "The Nanny", original: false, duration: "59%", year: 1993 },
+    { image: cover13, title: "Tenet", original: false, duration: "59%", year: 2020 },
   ];
   return (
     <div>

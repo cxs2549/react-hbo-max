@@ -10,6 +10,18 @@ const StyledHeader = styled.header`
 	left: 0;
 	top: 0;
 	width: 100%;
+	background: black;
+	&::after {
+		@media (min-width: 1280px) {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #353549;
+		}
+	}
 `
 
 const Navbar = () => {
