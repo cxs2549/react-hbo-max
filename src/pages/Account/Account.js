@@ -1,5 +1,8 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
+import {
+  cover1, cover11
+} from '../../assets/art'
 
 
 const StyledAccount = styled.div`
@@ -18,12 +21,12 @@ const StyledAccount = styled.div`
     padding: 0 2rem;
   }
   a {
-    font-weight: 600;
-		opacity: .8;
+    opacity: .8;
     position: relative;
-    
+   
   }
 	.active {
+    font-weight: 600;
 		opacity: 1;
     position: relative;
     &::after {
@@ -96,10 +99,11 @@ const StyledAccount = styled.div`
 `;
 
 const Account = () => {
+  
   return (
     <StyledAccount>
       <div id="top" className="pb-3">
-        <div id="innerTop" className="border-b px-4">
+        <div id="innerTop" className=" px-4">
           <div className="flex flex-col space-y-3 items-center justify-center py-8">
             <div className="h-20 w-20 md:h-32 md:w-32 border-2 rounded-full flex items-center justify-center text-3xl md:text-5xl">
               CS
@@ -139,7 +143,7 @@ const Account = () => {
         </div>
       </div>
 
-      <div id="bottom" className="pt-1 md:pt-5">
+      <div id="bottom" className="pt-2 md:pt-5">
         
         <Outlet />
       </div>

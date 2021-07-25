@@ -1,12 +1,28 @@
-import { cover3, cover18 } from "../../../assets/art";
+import { cover3, cover18, cover16 } from "../../../assets/art";
+import styled from "styled-components";
+import Page from "../Page/Page";
 
-const Downloads = () => {
+const StyledPage = styled.div`
+border: 1px solid white;
+  #wrapper {
+    grid-template-columns: 1.5fr 2fr;
+  }
+  #info {
+    font-size: 12px;
+  }
+`;
+
+const Continue = () => {
+  const downloads = [
+    { image: cover3, title: "blackhat", original: false, duration: "25%" },
+    { image: cover18, title: "Warrior", original: true, duration: "15%" },
+    { image: cover16, title: "The Little Things", original: true, duration: "59%" },
+  ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-      <img src={cover3} className="rounded" alt="" />
-      <img src={cover18} className="rounded" alt="" />
+    <div>
+      <Page page={downloads} />
     </div>
   );
 };
 
-export default Downloads;
+export default Continue;

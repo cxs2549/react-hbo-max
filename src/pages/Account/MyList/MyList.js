@@ -1,10 +1,26 @@
-import { cover1, cover9 } from "../../../assets/art";
+import { cover1, cover9, cover20 } from "../../../assets/art";
+import styled from "styled-components";
+import Page from "../Page/Page";
+
+const StyledPage = styled.div`
+border: 1px solid white;
+  #wrapper {
+    grid-template-columns: 1.5fr 2fr;
+  }
+  #info {
+    font-size: 12px;
+  }
+`;
 
 const MyList = () => {
+  const myList = [
+    { image: cover1, title: "Euphoria", original: true, duration: "10%" },
+    { image: cover9, title: "Scream", original: false, duration: "45%" },
+    { image: cover20, title: "WW84", original: false, duration: "5%" },
+  ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-      <img src={cover1} className="rounded" alt="" />
-      <img src={cover9} className="rounded" alt="" />
+    <div>
+      <Page page={myList} />
     </div>
   );
 };

@@ -27,7 +27,7 @@ const StyledSearch = styled.div`
   margin-top: 56px;
   padding-top: 12px;
   background-image: linear-gradient(to top, #1f1128 0%, black 74%);
-  height: 100%;
+  height: 100vh;
 	input {
 		transition: 250ms;
   border-radius: 2px;
