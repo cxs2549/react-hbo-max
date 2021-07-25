@@ -4,13 +4,13 @@ import styled from "styled-components";
 const StyledPage = styled.div`
   #imageWrapper {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.3);
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
   #wrapper {
@@ -21,8 +21,6 @@ const StyledPage = styled.div`
   }
   img {
     position: relative;
-    /* z-index: 1; */
-    
   }
   #durationBar {
     bottom: 2rem;
@@ -44,7 +42,6 @@ const Page = ({ page }) => {
             </div>
             <div className="absolute bottom-1 left-2 right-2 rounded bg-black bg-opacity-60 h-1 durationBar">
               <div
-                
                 style={{ width: item.duration }}
                 className="bg-gradient-to-r from-green-400 to-brand-pink h-full rounded-l opacity-80"
               ></div>
@@ -52,7 +49,7 @@ const Page = ({ page }) => {
           </div>
           <div id="info">
             <p>{item.title}</p>
-            {item.original && <span className='opacity-70'>HBO</span>}
+            {item.original && <span className="opacity-70">HBO</span>}
           </div>
         </div>
       ))}
