@@ -137,12 +137,12 @@ const StyledHero = styled.div`
     height: max-content;
     transition: bottom 250ms;
     @media (min-width: 1024px) {
-      /* bottom: 4%; */
       left: 2rem;
       bottom: 2rem;
     }
     @media (min-width: 1280px) {
       bottom: 4rem;
+      left: 3.5rem;
     }
   }
 `;
@@ -151,12 +151,11 @@ const Hero = () => {
   return (
     <StyledHero>
       <div id="imageContainer" className="relative">
-        {/* <img src={hero} alt="" className="md:order-2" /> */}
         <div id="hero"></div>
         <div id="overlay"></div>
       </div>
 
-      <div id="info" className="px-4 md:px-8 md:order-1">
+      <div id="info" className="px-4 md:px-5 md:order-1">
         <div id="text">
           <h1>
             Space Jam: <br /> A New Legacy

@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 const StyledList = styled.div`
+
   #imageContainer {
     display: flex;
     overflow-x: scroll;
     padding: 0 1rem;
     scrollbar-width: none;
     @media (min-width: 768px) {
-      padding: 0 2rem;
+      padding: 0 1.25rem;
       padding-bottom: 20px;
+    }
+    @media (min-width: 1280px) {
+      padding: 0;
+      padding-bottom: 20px;
+
     }
     #image {
       min-width: 48%;

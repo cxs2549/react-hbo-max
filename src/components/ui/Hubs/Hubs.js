@@ -3,18 +3,22 @@ import styled from "styled-components";
 const StyledHubs = styled.div`
   background-color: transparent;
   width: 100%;
-  /* margin-bottom: 56px; */
-  /* gap: .25rem; */
   padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1320px;
+	margin: 0 auto;
   
   padding-bottom: 4rem;
   @media (min-width: 768px) {
-    padding: 1rem 2rem;
+    padding: 1rem 1.25rem;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+  @media (min-width: 1280px) {
+    padding: 1rem 0;
+    padding-bottom: 0;
   }
 
   #imageWrapper {

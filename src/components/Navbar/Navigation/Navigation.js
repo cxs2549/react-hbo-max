@@ -2,18 +2,22 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../../assets/logo.png'
 import styled from 'styled-components'
 
-const StyledNavigation = styled.nav`
+const StyledNav = styled.nav`
 	height: 56px;
 	display: flex;
 	align-items: center;
-	width: 100%;
 	justify-content: space-between;
 	color: #fff;
 	background-color: black;
 	border-bottom: 1px solid #353549;
 	padding: 0 1rem;
 	position: relative;
-	z-index: 100;
+	z-index: 3;
+	max-width: 1320px;
+	margin: 0 auto;
+	@media (min-width: 1280px) {
+		padding: 0;
+	}
 	svg {
 		max-width: 24px;
 		transition: all 250ms;
@@ -30,8 +34,8 @@ const StyledNavigation = styled.nav`
 
 const Navigation = ({ open, clicked, close }) => {
 	return (
-		<StyledNavigation>
-			<div className="space-x-5 flex md:hidden">
+		<StyledNav>
+			<div className="space-x-5 xl:space-x-10 flex md:hidden xl:flex -ml-1">
 				<div onClick={clicked} className="cursor-pointer">
 					{!open ? (
 						<svg
@@ -65,11 +69,58 @@ const Navigation = ({ open, clicked, close }) => {
 						</svg>
 					)}
 				</div>
+				<div className="hidden xl:block">
+					<NavLink to="/search" activeClassName="text-brand-pink">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+							/>
+						</svg>
+					</NavLink>
+				</div>
 			</div>
 			<NavLink onClick={close} id="logo" to="/" className="absolute">
 				<img src={logo} alt="" />
 			</NavLink>
-
+			<div className="hidden xl:flex items-center space-x-10 cursor-pointer">
+				<div>
+					<button className="font-semibold p-2 border-2 rounded border-gray-300">Subscribe Now</button>
+				</div>
+				<div className="flex space-x-2">
+					<NavLink
+						to="/account/my-list"
+						activeClassName="text-brand-pink"
+						onClick={close}
+					>
+						<div className="flex items-center space-x-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								className="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2}
+									d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+								/>
+							</svg>
+							<p className="font-semibold">My Account</p>
+						</div>
+					</NavLink>
+				</div>
+			</div>
 			<div className="fixed h-14 bg-black bottom-0 left-0 w-full md:hidden">
 				<div className="space-x-24 flex md:hidden items-center justify-center h-full">
 					<NavLink to="/" end activeClassName="text-brand-pink" onClick={close}>
@@ -104,7 +155,11 @@ const Navigation = ({ open, clicked, close }) => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/account/my-list" activeClassName="text-brand-pink" onClick={close}>
+					<NavLink
+						to="/account/my-list"
+						activeClassName="text-brand-pink"
+						onClick={close}
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6"
@@ -122,7 +177,7 @@ const Navigation = ({ open, clicked, close }) => {
 					</NavLink>
 				</div>
 			</div>
-		</StyledNavigation>
+		</StyledNav>
 	)
 }
 

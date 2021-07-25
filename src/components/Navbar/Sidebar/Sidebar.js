@@ -14,6 +14,9 @@ const StyledSidebar = styled.div`
     height: 100vh;
     z-index: 22;
   }
+  @media (min-width: 1280px) {
+    display: none;
+  }
   nav {
     color: white;
     flex-flow: column;
