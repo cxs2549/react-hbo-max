@@ -10,11 +10,12 @@ margin-bottom: 60px;
 	background-color: #e056fd;
 background-image: linear-gradient(315deg, #561f61 0%, #000000 74%);
 	height: 100%;
+	padding-bottom: 60px;
+	height: 100vh;
 	@media (min-width: 640px) {
-		height: 100vh;
 	}
 	#wrapper {
-		max-width: 1366px;
+		max-width: 1300px;
 		margin: 0 auto;
 	}
 	a {
@@ -53,10 +54,10 @@ background-image: linear-gradient(315deg, #561f61 0%, #000000 74%);
 		
 		@media (min-width: 1280px) {
 			margin-left: 0;
+			padding: 0;
 		
 		}
 		@media (min-width: 1367px) {
-			padding: 0;
 
 		}
 		#innerTop {

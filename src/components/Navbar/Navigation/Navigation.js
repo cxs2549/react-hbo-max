@@ -10,13 +10,13 @@ const StyledNav = styled.nav`
 	color: #fff;
 	background-color: black;
 	border-bottom: 1px solid #353549;
-	padding: 0 1.25rem;
+	padding: 0 1rem;
 	position: relative;
 	z-index: 3;
-	max-width: 1366px;
+	max-width: 1300px;
 	margin: 0 auto;
 
-	@media (min-width: 1367px) {
+	@media (min-width: 1280px) {
 		padding: 0;
 	}
 	svg {

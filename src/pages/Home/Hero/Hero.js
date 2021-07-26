@@ -2,9 +2,9 @@ import styled from "styled-components";
 import hero from "../../../assets/hero.png";
 
 const StyledHero = styled.div`
-  height: 43vh;
+  height: 40vh;
   position: relative;
-
+  width: 100%;
   @media (min-width: 640px) {
     height: 50vh;
   }
@@ -12,10 +12,10 @@ const StyledHero = styled.div`
     height: 55vh;
   }
   @media (min-width: 1024px) {
-    height: 44vh;
+    height: 53vh;
   }
   @media (min-width: 1280px) {
-    height: 85vh;
+    height: 72vh;
   }
 
   #hero {
@@ -27,22 +27,16 @@ const StyledHero = styled.div`
     height: 30vh;
     max-width: 100vw;
     margin: 0 auto;
- 
+
     @media (min-width: 640px) {
       height: 40vh;
     }
     @media (min-width: 768px) {
       height: 45vh;
     }
-    @media (min-width: 1024px) {
-      /* height: 60vh;
-      background-position: top; */
-    }
+
     @media (min-width: 1280px) {
-      /* margin-top: -1rem; */
-      /* background-size: contain; */
-      height: 95vh;
-      /* background-position: center center; */
+      height: 75vh;
     }
     transition: height 0.7s;
   }
@@ -55,18 +49,25 @@ const StyledHero = styled.div`
 
     background-image: linear-gradient(to top, #101641 16%, transparent 100%);
   }
-
+  #textContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
   #textWrapper {
     color: white;
+
     width: 100%;
-    position: fixed;
-    bottom: 0;
-
-@media (min-width: 1024px) {
-  bottom: -1.6rem;
-}
+    padding: 0 1rem;
+    position: absolute;
+    bottom: -6rem;
+    max-width: 1300px;
     
-
+    @media (min-width: 1280px) {
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      bottom: 0;
+    }
     h2 {
       text-transform: uppercase;
       font-size: 0.9rem;
@@ -126,36 +127,6 @@ const StyledHero = styled.div`
         }
       }
     }
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    position: absolute;
-    left: 1rem;
-    bottom: 0;
-
-    @media (min-width: 768px) {
-      padding-left: 1.25rem;
-
-      left: 0;
-    }
-    @media (min-width: 1280px) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    @media (min-width: 1340px) {
-      padding-left: 0;
-    }
-    #text {
-      height: max-content;
-      transition: bottom 250ms;
-      @media (min-width: 1024px) {
-        bottom: 2rem;
-      }
-      @media (min-width: 1280px) {
-        bottom: 1rem;
-        left: 0;
-      }
-    }
   }
 `;
 
@@ -166,39 +137,41 @@ const Hero = () => {
         <div id="hero"></div>
         <div id="overlay"></div>
       </div>
-      <div id="textWrapper">
-        <div id="text">
-          <h1>
-            Space Jam: <br /> A New Legacy
-          </h1>
-          <h2>Now playing</h2>
-          <p>
-            In theaters and on HBO Max. Streaming <br /> through Aug 15.
-          </p>
-          <div className="text-sm flex space-x-4 mt-6">
-            <button className="border-2  rounded-full uppercase font-semibold flex items-center space-x-1">
-              <div className="text-brand-bright-pink">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-brand-pink"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <h4>watch</h4>
-            </button>
-            <button className="rounded-full uppercase font-semibold inline">
-              more info
-            </button>
+      
+        <div className="relative">
+          <div id="textWrapper">
+            <h1>
+              Space Jam: <br /> A New Legacy
+            </h1>
+            <h2>Now playing</h2>
+            <p>
+              In theaters and on HBO Max. Streaming <br /> through Aug 15.
+            </p>
+            <div className="text-sm flex space-x-4 mt-6">
+              <button className="border-2  rounded-full uppercase font-semibold flex items-center space-x-1">
+                <div className="text-brand-bright-pink">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-brand-pink"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h4>watch</h4>
+              </button>
+              <button className="rounded-full uppercase font-semibold inline">
+                more info
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+   
     </StyledHero>
   );
 };

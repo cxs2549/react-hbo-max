@@ -41,7 +41,7 @@ const StyledDrawer = styled.div`
 			background-color: white;
 		}
 		a {
-			padding: 12px 1rem;
+			padding: 12px 1.25rem;
 			font-size: 1.25rem;
 			font-weight: 300;
 			width: 100%;
@@ -114,7 +114,6 @@ const StyledHubs = styled.div`
 
 const Drawer = ({ open, clicked }) => {
 	const links1 = [
-		{ name: 'home', to: '/' },
 		{ name: 'series', to: '/series' },
 		{ name: 'movies', to: '/movies' },
 		{ name: 'originals', to: '/originals' },
@@ -147,17 +146,20 @@ const Drawer = ({ open, clicked }) => {
 	return (
 		<StyledDrawer open={open}>
 			<nav>
+				<NavLink to="/" end activeClassName="active" onClick={clicked}>
+					Home
+				</NavLink>
 				{links1.map((link) => (
-					<NavLink to={`genre/${link.to}`} end activeClassName="active" onClick={clicked}>
+					<NavLink to={`genre/${link.to}`} activeClassName="active" onClick={clicked}>
 						{link.name}
 					</NavLink>
 				))}
 				{links2.map((link, i) => (
-					<NavLink key={i} to={`genre-${i}`} activeClassName="active" onClick={clicked}>
+					<NavLink key={i} to={`genre/${i}`} activeClassName="active" onClick={clicked}>
 						{link}
 					</NavLink>
 				))}
-				<NavLink to="/audio-description" activeClassName="active" onClick={clicked}>
+				<NavLink to="/genre/audio-description" activeClassName="active" onClick={clicked}>
 					Audio Description
 				</NavLink>
 				<StyledHubs>

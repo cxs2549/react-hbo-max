@@ -25,6 +25,7 @@ import {
 const StyledSearch = styled.div`
   color: white;
   margin-top: 56px;
+  padding: 0 1rem;
   padding-top: 12px;
   height: 100vh;
   
@@ -36,7 +37,7 @@ const StyledSearch = styled.div`
 
 	}
   #wrapper {
-    max-width: 1366px;
+    max-width: 1300px;
     margin: 0 auto;
 
   }
@@ -55,7 +56,7 @@ const StyledSearch = styled.div`
   #searchIcon {
     top: 50%;
     transform: translateY(-50%);
-    left: 1rem;
+    left: 0;
     @media (min-width: 768px) {
       left: 0;
     }

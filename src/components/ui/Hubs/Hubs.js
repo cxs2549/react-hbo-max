@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledHubs = styled.div`
   background-color: transparent;
   width: 100%;
-  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -11,19 +10,18 @@ const StyledHubs = styled.div`
 	margin: 0 auto;
  
   padding-bottom: 4rem;
+  padding-top: .25rem;
   @media (min-width: 768px) {
-    padding: 1rem 1.25rem;
+    padding: 0;
     padding-bottom: 0;
     margin-bottom: 0;
     padding-top: 0;
   }
   @media (min-width: 1280px) {
-    padding: 0 1.25rem;
+    padding: 0;
     
   }
-  @media (min-width: 1360px) {
-    padding: 0;
-  }
+
 
   #imageWrapper {
     cursor: pointer;

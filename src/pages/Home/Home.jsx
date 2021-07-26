@@ -41,10 +41,10 @@ import {
 const StyledHome = styled.div`
   position: relative;
   z-index: 0;
-  background-color: red;
   background-color: #e4b5cb;
   background-image: linear-gradient(to bottom, #101641 30%, black 50%, #3c0e79);
 	overflow-x: hidden;
+  
   @media (min-width: 768px) {
     background-image: linear-gradient(
       to bottom,
@@ -68,7 +68,7 @@ const StyledHome = styled.div`
 const Home = () => {
   const justAdded = [cover1, cover2, cover3, cover4, cover5, cover13];
   const popular = [cover6, cover7, cover8, cover9, cover10];
-  const newEps = [cover11, cover12, cover13, cover14];
+  const newEps = [cover2, cover15, cover18, cover14];
   const trending = [cover15, cover16, cover17, cover18, cover19, cover20];
   const hubs = [hub1, hub2, hub3, hub4, hub5, hub6, hub7, hub8, hub9, hub10];
   return (
@@ -80,7 +80,7 @@ const Home = () => {
         <List title="New Episodes this week" art={newEps} size="36%" />
         <List title="Trending Drama" art={trending} />
       <div id="hubs">
-        <h3 className="text-white pl-4 md:pl-5">HBO Hubs</h3>
+        <h3 className="text-white">HBO Hubs</h3>
         <Hubs hubs={hubs} />
       </div>
       </Lists>

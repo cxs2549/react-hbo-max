@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledList = styled.div`
 
-padding: 0 1rem;
+
   #imageContainer {
     display: flex;
     overflow-x: scroll;
