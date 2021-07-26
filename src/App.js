@@ -7,6 +7,7 @@ import Account from "./pages/Account/Account";
 import MyList from "./pages/Account/MyList/MyList";
 import Downloads from "./pages/Account/Downloads/Downloads";
 import Continue from "./pages/Account/Continue/Continue";
+import InDev from "./pages/InDev/InDev";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -19,6 +20,10 @@ const routes = [
       { path: "/downloads", element: <Downloads /> },
       { path: "/continue-watching", element: <Continue /> },
     ],
+  },
+  {
+    path: "/genre/:id",
+    element: <InDev />,
   },
 ];
 

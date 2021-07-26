@@ -10,12 +10,13 @@ const StyledNav = styled.nav`
 	color: #fff;
 	background-color: black;
 	border-bottom: 1px solid #353549;
-	padding: 0 1rem;
+	padding: 0 1.25rem;
 	position: relative;
 	z-index: 3;
-	max-width: 1320px;
+	max-width: 1366px;
 	margin: 0 auto;
-	@media (min-width: 1280px) {
+
+	@media (min-width: 1367px) {
 		padding: 0;
 	}
 	svg {
@@ -91,17 +92,17 @@ const Navigation = ({ open, clicked, close }) => {
 			<NavLink onClick={close} id="logo" to="/" className="absolute">
 				<img src={logo} alt="" />
 			</NavLink>
-			<div className="hidden xl:flex items-center space-x-10 cursor-pointer">
-				<div>
-					<button className="font-semibold p-2 border-2 rounded border-gray-300">Subscribe Now</button>
+			<div className="hidden xl:flex items-center space-x-10 justify-end">
+				<div className='cursor-pointer'>
+					<button className="font-semibold  border-b-2 border-gray-300">Subscribe Now</button>
 				</div>
-				<div className="flex space-x-2">
+				<div className="">
 					<NavLink
 						to="/account/my-list"
 						activeClassName="text-brand-pink"
 						onClick={close}
 					>
-						<div className="flex items-center space-x-2">
+					
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								className="h-6 w-6"
@@ -116,8 +117,7 @@ const Navigation = ({ open, clicked, close }) => {
 									d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 								/>
 							</svg>
-							<p className="font-semibold">My Account</p>
-						</div>
+					
 					</NavLink>
 				</div>
 			</div>

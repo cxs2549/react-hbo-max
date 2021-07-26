@@ -2,9 +2,22 @@ import styled from "styled-components";
 import hero from "../../../assets/hero.png";
 
 const StyledHero = styled.div`
-  overflow: hidden;
+  height: 43vh;
   position: relative;
-  margin-top: 56px;
+
+  @media (min-width: 640px) {
+    height: 50vh;
+  }
+  @media (min-width: 768px) {
+    height: 55vh;
+  }
+  @media (min-width: 1024px) {
+    height: 44vh;
+  }
+  @media (min-width: 1280px) {
+    height: 85vh;
+  }
+
   #hero {
     background-image: url(${hero});
     background-position: center center;
@@ -12,66 +25,47 @@ const StyledHero = styled.div`
     background-repeat: no-repeat;
     width: 100%;
     height: 30vh;
+    max-width: 100vw;
+    margin: 0 auto;
+ 
+    @media (min-width: 640px) {
+      height: 40vh;
+    }
     @media (min-width: 768px) {
-      height: 55vh;
+      height: 45vh;
     }
     @media (min-width: 1024px) {
-      height: 45vh;
-      background-position: top;
+      /* height: 60vh;
+      background-position: top; */
     }
     @media (min-width: 1280px) {
-      height: 70vh;
+      /* margin-top: -1rem; */
+      /* background-size: contain; */
+      height: 95vh;
+      /* background-position: center center; */
     }
     transition: height 0.7s;
-  }
-  img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 0;
   }
   #overlay {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60%;
-    background-image: linear-gradient(to top, #171e54, transparent);
-  }
-  #info {
-    background-image: linear-gradient(#171e54, black);
-    color: white;
-    height: 120px;
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    @media (min-width: 1024px) {
-      height: 100px;
-    }
-    @media (min-width: 1280px) {
-      height: 60px;
-    }
+    height: 50%;
 
-    h1 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      line-height: 1.1;
-      padding-bottom: 0.25rem;
-      @media (min-width: 768px) {
-        font-size: 1.75rem;
-      }
-      @media (min-width: 1024px) {
-        font-size: 2.2rem;
-      }
-      @media (min-width: 1280px) {
-        font-size: 300%;
-        line-height: 1;
-        padding-bottom: 0.5rem;
-        text-shadow: 1px 1px 1px #6d2b63;
-      }
-    }
+    background-image: linear-gradient(to top, #101641 16%, transparent 100%);
+  }
+
+  #textWrapper {
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+@media (min-width: 1024px) {
+  bottom: -1.6rem;
+}
+    
 
     h2 {
       text-transform: uppercase;
@@ -113,36 +107,54 @@ const StyledHero = styled.div`
       @media (min-width: 768px) {
         font-size: 0.9rem;
       }
+      @media (min-width: 1280px) {
+        font-size: 1rem;
+      }
       &:first-child {
         position: relative;
         z-index: 500;
         transition: all 400ms;
         &:hover {
-          border-color: #FF00E3;
+          border-color: #ff00e3;
         }
       }
       &:last-child {
         background-color: #c21bd8;
         transition: opacity 400ms;
         &:hover {
-          opacity: .9;
-         
+          opacity: 0.9;
         }
       }
     }
-  }
-  #text {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
     position: absolute;
-    bottom: 1.25rem;
-    height: max-content;
-    transition: bottom 250ms;
-    @media (min-width: 1024px) {
-      left: 2rem;
-      bottom: 2rem;
+    left: 1rem;
+    bottom: 0;
+
+    @media (min-width: 768px) {
+      padding-left: 1.25rem;
+
+      left: 0;
     }
     @media (min-width: 1280px) {
-      bottom: 4rem;
-      left: 3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: 1340px) {
+      padding-left: 0;
+    }
+    #text {
+      height: max-content;
+      transition: bottom 250ms;
+      @media (min-width: 1024px) {
+        bottom: 2rem;
+      }
+      @media (min-width: 1280px) {
+        bottom: 1rem;
+        left: 0;
+      }
     }
   }
 `;
@@ -154,8 +166,7 @@ const Hero = () => {
         <div id="hero"></div>
         <div id="overlay"></div>
       </div>
-
-      <div id="info" className="px-4 md:px-5 md:order-1">
+      <div id="textWrapper">
         <div id="text">
           <h1>
             Space Jam: <br /> A New Legacy

@@ -24,7 +24,7 @@ const StyledDrawer = styled.div`
 	}
 	@media (min-width: 1280px) {
 		left: ${({ open }) => (open ? '0' : '-100%')};
-		padding-left: 3.5rem;
+		
 	}
 	nav {
 		height: min-content;
@@ -48,6 +48,9 @@ const StyledDrawer = styled.div`
 			text-transform: capitalize;
 			transition: all 150ms;
 			transition-delay: 100ms;
+			@media (min-width: 1280px) {
+				padding-left: 1.25rem;
+			}
 		
 
 			&:hover {
@@ -145,7 +148,7 @@ const Drawer = ({ open, clicked }) => {
 		<StyledDrawer open={open}>
 			<nav>
 				{links1.map((link) => (
-					<NavLink to={link.to} end activeClassName="active" onClick={clicked}>
+					<NavLink to={`genre/${link.to}`} end activeClassName="active" onClick={clicked}>
 						{link.name}
 					</NavLink>
 				))}

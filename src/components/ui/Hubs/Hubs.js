@@ -9,22 +9,26 @@ const StyledHubs = styled.div`
   justify-content: space-between;
   max-width: 1320px;
 	margin: 0 auto;
-  
+ 
   padding-bottom: 4rem;
   @media (min-width: 768px) {
     padding: 1rem 1.25rem;
     padding-bottom: 0;
     margin-bottom: 0;
+    padding-top: 0;
   }
   @media (min-width: 1280px) {
-    padding: 1rem 0;
-    padding-bottom: 0;
+    padding: 0 1.25rem;
+    
+  }
+  @media (min-width: 1360px) {
+    padding: 0;
   }
 
   #imageWrapper {
     cursor: pointer;
 
-    min-width: 49%;
+    min-width: 47%;
     height: 76px;
     padding: 4px 32px;
     border-radius: 99999px;
@@ -63,7 +67,7 @@ const StyledHubs = styled.div`
 
 const Hubs = ({ hubs }) => {
   return (
-    <StyledHubs className=''>
+    <StyledHubs>
       {hubs.map((hub, i) => (
         <div key={i} id="imageWrapper">
           <div className=" rounded-full h-full" id="imageBG">
